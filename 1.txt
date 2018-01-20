@@ -1,0 +1,57 @@
+问题1：
+   输入两个整数值dole和bob
+   初始化accumulator变量为0
+   如果输入dole的值为负数或0：变量accumulator的输出值为0
+   如果输入dole的值为正数：   当 2^0 <= dole < 2^1 时，变量accumulator的输出值为 2^0 * bob
+                              当 2^1 <= dole < 2^2 时，变量accumulator的输出值为 2^1 * bob
+    		                  当 2^2 <= dole < 2^3 时，变量accumulator的输出值为 2^2 * bob
+			                  当 2^3 <= dole < 2^4 时，变量accumulator的输出值为 2^3 * bob     
+			           	      …………………………………………
+     		                  …………………………………………
+			                  …………………………………………
+		                      当 2^(n-1) <= dole < 2^n 时，变量accumulator的输出值为 2^(n-1) * bob
+
+
+
+
+问题2：
+   程序的返回值为0
+
+
+
+问题3：
+   代码行 ：for ( ; number > 0; accumulator *= number--);
+   语句末尾多了一个 “ ；”
+
+
+
+问题4：
+   #include <iostream>
+   #include <ctime>
+   #include <cstdlib>
+   using namespace std;
+
+   int main()
+   {
+     long count;
+	 double sum = 0;
+	 double a, b,;
+	 double pi;
+	 cout << "输入实验次数：" << endl;
+	 cin << count;
+	 srand(time(0));
+	 for(int i = 0; i <= count; i++ )
+	 {
+	   a = rand() / double(RAND_MAX);
+	   b = rand() / double(RAND_MAX);
+	   if((a*a) + (b*b) <= 1)
+	   {
+	     sum++;
+	   }
+	 }
+     pi = sum / count *4;
+	 cout << "pi:" << pi << endl;
+	 return 0;
+   }
+
+
