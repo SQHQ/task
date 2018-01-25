@@ -35,10 +35,10 @@
    {
      long count;
 	 double sum = 0;
-	 double a, b,;
+	 double a, b;
 	 double pi;
 	 cout << "输入实验次数：" << endl;
-	 cin << count;
+	 cin >> count;
 	 srand(time(0));
 	 for(int i = 0; i <= count; i++ )
 	 {
